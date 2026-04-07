@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+<div class="">
+          
+      <section x-data="{ mobileNavOpen: false }">
+        <div class="container px-4 mx-auto">
+          
+        </div>
+        <div :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}" class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+          <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-blueGray-800 opacity-25"></div>
+          <nav class="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-8">
+              <a class="mr-auto text-3xl font-semibold leading-none" href="#">
+                <img class="h-10" src="metis-assets/logos/metis/metis.svg" alt="" width="auto">
+              </a>
+              <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blueGray-500" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <div>
+              <ul>
+                <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Product</a>
+                </li>
+                <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Company</a>
+                </li>
+                <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">About Us</a>
+                </li>
+                <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Features</a>
+                </li>
+              </ul>
+              <div class="mt-4 pt-6 border-t border-blueGray-100">
+                <a class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-600 hover:bg-blue-700 text-white rounded" href="#">Sign Up</a>
+                <a class="block px-4 py-3 mb-2 text-xs text-center text-blue-600 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" href="#">Log In</a>
+              </div>
+            </div>
+            <div class="mt-auto">
+              <p class="my-4 text-xs text-blueGray-400">
+                <span>Get in Touch</span>
+                <a class="text-blue-600 hover:text-blue-600 underline" href="#">info@example.com</a>
+              </p>
+              <a class="inline-block px-1" href="#">
+                <img src="metis-assets/icons/facebook-blue.svg" alt="">
+              </a>
+              <a class="inline-block px-1" href="#">
+                <img src="metis-assets/icons/twitter-blue.svg" alt="">
+              </a>
+              <a class="inline-block px-1" href="#">
+                <img src="metis-assets/icons/instagram-blue.svg" alt="">
+              </a>
+            </div>
+          </nav>
+        </div>
+      </section>
+          
+      <section x-data="{ mobileNavOpen: false }">
+        <div class="container px-4 mx-auto">
+          <nav class="flex items-center py-6">
+            <a class="text-3xl font-semibold leading-none" href="index.html">
+              <img class="h-10" src="images/https-b62ee529e88877488ddc08b79a93ac1b-cdn-bubble-io-f1687811837576x115721416468677730-Webpy-20Logo.jpeg" alt="" width="auto">
+            </a>
+            <div class="lg:hidden ml-auto">
+              <button x-on:click="mobileNavOpen = !mobileNavOpen" class="flex items-center py-2 px-3 text-blue-600 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="fill-current h-4 w-4" viewbox="0 0 20 20">
+                  <title>Mobile menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
+            </div>
+            <ul class="hidden lg:flex items-center space-x-12 ml-auto mr-12">
+              <li>
+                <a class="text-sm text-blueGray-400 hover:text-blueGray-500" href="index.html">Inicio</a>
+              </li>
+              <li>
+                <a class="text-sm text-blueGray-400 hover:text-blueGray-500" href="#">Demo Gratis</a>
+              </li>
+              <li>
+                <a class="text-sm text-blueGray-400 hover:text-blueGray-500" href="#">Empieza Aquí</a>
+              </li>
+              <li>
+                <a class="text-sm text-blueGray-400 hover:text-blueGray-500" href="nosotros.html">Nosotros</a>
+              </li>
+            </ul>
+            <div class="hidden lg:block">
+              
+              <a class="inline-block px-4 py-3 text-xs font-semibold leading-none bg-blue-600 hover:bg-blue-700 text-white rounded" href="#">Log In</a>
+            </div>
+          </nav>
+        </div>
+        <div :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}" class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+          <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-blueGray-800 opacity-25"></div>
+          <nav class="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-8">
+              <a class="mr-auto text-3xl font-semibold leading-none" href="index.html">
+                <img class="h-10" src="images/https-b62ee529e88877488ddc08b79a93ac1b-cdn-bubble-io-f1687811837576x115721416468677730-Webpy-20Logo.jpeg" alt="" width="auto">
+              </a>
+              <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blueGray-500" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <div>
+              <ul>
+                <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="index.html">Inicio</a>
+                </li>
+                <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Demo Gratis</a>
+                </li>
+                <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Empieza Aquí</a>
+                </li>
+                <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="nosotros.html">Nosotros</a>
+                </li>
+              </ul>
+              <div class="mt-4 pt-6 border-t border-blueGray-100">
+                <a class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-600 hover:bg-blue-700 text-white rounded" href="#">Log In</a>
+                
+              </div>
+            </div>
+            
+          </nav>
+        </div>
+      </section>
+          
+      <section class="pb-20">
+        <div class="pt-20 pb-8 mb-12 bg-cover bg-no-repeat" style="background-image: url('images/bg.jpg')">
+          <div class="container px-4 mx-auto">
+            <div class="max-w-2xl mx-auto removed">
+              <div class="text-center mb-6 removed">
+                <h2 class="text-4xl md:text-5xl mt-4 text-white font-bold font-heading">Nosotros</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container px-4 mx-auto"></div>
+        <div class="container px-4 mx-auto mt-12">
+          <div class="max-w-4xl mx-auto">
+            <p class="mb-6 leading-loose text-blueGray-400">Webpy es una emocionante y revolucionaria herramienta impulsada por inteligencia artificial que simplifica radicalmente la creación de sitios web. Con la capacidad de comprender las necesidades y preferencias de los usuarios, Webpy utiliza algoritmos avanzados para diseñar y personalizar sitios web de manera automática. Desde la elección de diseños y paletas de colores hasta la disposición de contenido y elementos interactivos, Webpy se encarga de todo el proceso de manera inteligente y eficiente. Esta plataforma marca un hito en la convergencia de la tecnología y el diseño web, permitiendo que personas con diversos niveles de habilidades técnicas creen sitios impresionantes con facilidad y rapidez, todo gracias al poder de la inteligencia artificial de Webpy.</p>
+          </div>
+        </div>
+        <div class="container px-4 mx-auto"></div>
+        <div class="container px-4 mx-auto"></div>
+        <div class="container px-4 mx-auto mt-12">
+          <h2 class="text-3xl font-bold text-center mb-8">Misión</h2>
+          <div class="max-w-4xl mx-auto">
+            <p class="mb-6 leading-loose text-blueGray-400">Somos un equipo apasionado en Webpy, dedicados a transformar la forma en que se crea y experimenta la presencia en línea. Nuestra misión es fusionar la innovación tecnológica con la creatividad visual, brindando a individuos y empresas una plataforma revolucionaria para materializar sus ideas en sitios web impactantes. Con un enfoque en la usabilidad y la estética, combinamos la destreza en inteligencia artificial con la visión artística para ofrecer una experiencia de usuario excepcional. Cada miembro de nuestro equipo aporta su expertise único, desde expertos en IA y desarrollo hasta diseñadores gráficos, trabajando en conjunto para empoderar a nuestros usuarios y hacer realidad la visión de una web sin límites.</p>
+          </div>
+        </div>
+        <div class="container px-4 mx-auto"></div>
+        <div class="container px-4 mx-auto"></div>
+        <div class="container px-4 mx-auto mt-12">
+          <h2 class="text-3xl font-bold text-center mb-8">Visión</h2>
+          <div class="max-w-4xl mx-auto">
+            <p class="mb-6 leading-loose text-blueGray-400">Nuestra visión en Webpy es trazar el camino hacia un futuro en el que la creación y el diseño de sitios web sean accesibles para todos, sin importar su nivel de experiencia técnica. Nos esforzamos por ser líderes en la convergencia de la inteligencia artificial y el diseño web, brindando herramientas que inspiren la creatividad y potencien la expresión digital. Imaginamos un ecosistema en el que la tecnología se convierta en un aliado inseparable de la imaginación, permitiendo a cada individuo y empresa manifestar su identidad en línea de manera única y cautivadora. Con un compromiso constante con la innovación y la excelencia, trabajamos incansablemente para hacer realidad esta visión y enriquecer el panorama digital de manera significativa.</p>
+          </div>
+        </div>
+      </section>
+          
+      <section class="py-16 bg-gray-100 border-t border-gray-300">
+        <div class="container px-4 mx-auto flex flex-col items-center text-center removed">
+          <a class="inline-block mb-6 text-2xl font-semibold leading-none">{{companyName}}</a>
+          <div class="flex justify-center mb-6 -mx-2">
+            <a class="inline-block px-2" href="#">
+              <img src="https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Facebook_glyph_svg-64.png" width="25" height="25" alt="Facebook">
+            </a>
+            <a class="inline-block px-2" href="#">
+              <img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Instagram_svg-64.png" width="25" height="25" alt="Instagram">
+            </a>
+            <a class="inline-block px-2" href="#">
+              <img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Youtube_svg-64.png" width="25" height="25" alt="YouTube">
+            </a>
+            <a class="inline-block px-2" href="#">
+              <img src="https://cdn2.iconfinder.com/data/icons/social-media-2421/512/TikTok-64.png" width="25" height="25" alt="TikTok">
+            </a>
+            <a class="inline-block px-2" href="#">
+              <img src="https://images.freeimages.com/image/large-previews/f35/x-twitter-logo-on-black-circle-5694247.png?fmt=avif&amp;h=350" width="25" height="25" alt="Twitter">
+            </a>
+            <a class="inline-block px-2" href="#">
+              <img src="https://cdn0.iconfinder.com/data/icons/picons-social/57/spotify_rounded-64.png" width="25" height="25" alt="Spotify">
+            </a>
+            <a class="inline-block px-2" href="#">
+              <img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Linkedin_svg-64.png" width="25" height="25" alt="LinkedIn">
+            </a>
+          </div>
+          <p class="text-sm text-blueGray-400 footer-copyright">
+            ©
+            <span class="current-year"></span>
+            Hecho con <a href="https://webpy.co" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors duration-200">Webpy</a>
+          </p>
+        </div>
+      </section>
+  </div>
+    <script type="text/javascript" src="js/571722.js?v=1775605929" data-custom-component-id="571722"></script>
+</body>
+</html>
+
