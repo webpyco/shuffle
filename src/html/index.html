@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+<div class="">
+          
+      <section id="login">
+        <div class="container px-4 mx-auto">
+          <nav class="flex items-center py-6 hidden">
+            <a class="text-3xl font-semibold leading-none" href="#">
+              <img class="h-10" src="images/imageedit-6-4711124916.png" alt="" width="auto">
+            </a>
+            <div class="ml-auto">
+              <a class="mr-2 inline-block px-4 py-3 text-xs text-blue-600 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded hidden" href="#">Log In</a>
+              <a class="inline-block p-3 bg-black hover:bg-blue-700 text-white rounded-full" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9M16.5 3.5l4 4L7 21H3v-4L16.5 3.5z"></path>
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </section>
+          
+      <section x-data="{ mobileNavOpen: false }">
+        <div class="container px-4 mx-auto">
+          <nav class="flex items-center py-6">
+            <a class="text-3xl font-semibold leading-none" href="index.html">
+              <img class="h-16" src="https://veritypc.com/wp-content/uploads/2015/01/logo_placeholder.png" alt="" width="auto">
+            </a>
+            <div class="lg:hidden ml-auto">
+              <button x-on:click="mobileNavOpen = !mobileNavOpen" class="flex items-center py-2 px-3 text-blue-600 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300">
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_b330c40f5c085165e0c41cde845e1371" class="fill-current h-4 w-4" viewbox="0 0 20 20"></svg>
+              </button>
+            </div>
+            <ul class="hidden lg:flex items-center space-x-12 ml-auto mr-12">
+              <li>
+              </li><li><a class="text-sm text-blueGray-400 hover:text-blueGray-500" href="index.html">Inicio</a></li>
+              <li><a class="text-sm text-blueGray-400 hover:text-blueGray-500" href="#">Demo Gratis</a></li>
+              <li><a class="text-sm text-blueGray-400 hover:text-blueGray-500" href="tienda.html">Diseños</a></li>
+              <li><a class="text-sm text-blueGray-400 hover:text-blueGray-500" href="nosotros.html">Nosotros</a></li>
+            </ul>
+            <div class="hidden lg:block"><a class="login-btn inline-block px-4 py-3 text-xs font-semibold leading-none text-white rounded" href="signin.html" style="background-color: {{brandColor}};">Log In</a></div>
+          </nav>
+        </div>
+        <div :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}" class="fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50 block">
+          <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-blueGray-800 opacity-25"></div>
+          <nav class="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto removed">
+            <div class="flex items-center mb-8">
+              <a class="mr-auto text-3xl font-semibold leading-none" href="#">
+                <img class="h-12" src="https://veritypc.com/wp-content/uploads/2015/01/logo_placeholder.png" alt="" width="auto">
+              </a>
+              <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_2553c512f7629f99f4e233fea4b6593e" class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blueGray-500" fill="none" viewbox="0 0 24 24" stroke="currentColor"></svg>
+              </button>
+            </div>
+            <div>
+              <ul>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Inicio</a></li>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Demo Gratis</a></li>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Empieza Aquí</a></li>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Nosotros</a></li>
+                <li class="mb-1 removed">
+              </li></ul>
+              <div class="mt-4 pt-6 border-t border-blueGray-100 removed"><a class="login-btn block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none text-white rounded" href="#" style="background-color: {{brandColor}};">Log In</a></div>
+            </div>
+          </nav>
+        </div>
+      </section>
+          
+      <section x-data="{ mobileNavOpen: false }">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap items-center -mx-3">
+            <div class="w-full lg:w-1/2 px-3">
+              <div class="py-12">
+                <div class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
+                  <h2 class="text-3xl md:text-4xl mb-4 font-bold font-heading">
+                    <span>{{heroTitle}}</span>
+                  </h2>
+                  <p class="text-blueGray-400 leading-relaxed">{{heroDesc}}</p>
+                </div>
+                <div class="text-center lg:text-left"><a class="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-white text-center font-semibold leading-none rounded" href="#" style="background-color: {{brandColor}};">Demo Gratis</a><a class="block sm:inline-block py-4 px-8 text-xs text-blueGray-500 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded" href="signup.html">Diseños</a></div>
+              </div>
+            </div>
+            <div class="w-full lg:w-1/2 px-3 mb-12 lg:mb-0">
+              <div class="lg:h-128 flex items-center justify-center">
+                <img class="w-full h-full lg:max-w-lg" src="%7B%7BheroImage%7D%7D" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}" class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+          <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-blueGray-800 opacity-25"></div>
+          <nav class="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-8">
+              <a class="mr-auto text-3xl font-semibold leading-none" href="#">
+                <img class="h-10" src="metis-assets/logos/metis/metis.svg" alt="" width="auto">
+              </a>
+              <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_2553c512f7629f99f4e233fea4b6593e" class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blueGray-500" fill="none" viewbox="0 0 24 24" stroke="currentColor"></svg>
+              </button>
+            </div>
+            <div>
+              <ul>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Product</a></li>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Company</a></li>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">About Us</a></li>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Features</a></li>
+              </ul>
+              <div class="mt-4 pt-6 border-t border-blueGray-100"><a class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none text-white rounded" href="#" style="background-color: #d21919;">Sign Up</a><a class="block px-4 py-3 mb-2 text-xs text-center text-blue-600 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" href="#">Log In</a></div>
+            </div>
+            <div class="mt-auto">
+              <p class="my-4 text-xs text-blueGray-400">
+                <span>Get in Touch</span>
+                <a class="text-blue-600 hover:text-blue-600 underline" href="#">info@example.com</a>
+              </p>
+              <a class="inline-block px-1" href="#">
+                <img src="metis-assets/icons/facebook-blue.svg" alt="">
+              </a>
+              <a class="inline-block px-1" href="#">
+                <img src="metis-assets/icons/twitter-blue.svg" alt="">
+              </a>
+              <a class="inline-block px-1" href="#">
+                <img src="metis-assets/icons/instagram-blue.svg" alt="">
+              </a>
+            </div>
+          </nav>
+        </div>
+      </section>
+          
+      <section class="pt-20 pb-24" style="background-color: {{brandColor}};">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-xl mx-auto text-center">
+            <h2 class="my-3 text-3xl md:text-4xl text-white font-bold font-heading">{{vpTitle}}</h2>
+            <p class="text-sm md:text-base text-white">{{vpDesc}}</p>
+            <div class="mt-10"><a class="brand-hover-btn inline-block py-4 px-8 text-xs font-semibold leading-none bg-white border hover:border-white hover:text-white rounded transition duration-300" style="color: {{brandColor}};" href="#">Demo Gratis</a></div>
+          </div>
+        </div>
+      </section>
+          
+      <section class="py-20" x-data="{ showContent: false }">
+        <div class="container px-4 mx-auto">
+          <h2 class="mb-12 lg:mb-20 text-3xl md:text-4xl font-bold font-heading hidden">Our Blog</h2>
+          <div class="flex flex-wrap -mx-4 mb-20">
+            <div class="w-full lg:w-1/2 px-4 lg:pr-20 lg:pt-4 order-1 lg:order-0">
+              <span class="inline-block py-1 px-3 uppercase text-xs font-semibold bg-blue-50 rounded-full text-blue-600 hidden">Development</span>
+              <h3 class="my-4 text-xl md:text-2xl font-bold font-heading">{{services_0_title}}</h3>
+              <p class="mb-4 text-sm md:text-base leading-loose text-blueGray-400">{{services_0_description}}</p>
+              <a class="text-xs font-semibold" style="color: {{brandColor}};" href="#">
+                <span>Demo Gratis</span>
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_ea5ee3707da90bc6007314bf6231c3a6" class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"></svg>
+              </a>
+            </div>
+            <div class="w-full lg:w-1/2 px-4 mb-8 order-0 lg:order-1 grid place-items-end">
+              <img class="w-80 h-80 object-cover rounded" src="%7B%7Bservices_0_img%7D%7D" alt="">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-4 mb-20">
+            <div class="w-full lg:w-1/2 px-4 lg:pl-20 lg:pt-4 order-1">
+              <span class="inline-block py-1 px-3 uppercase text-xs font-semibold bg-blue-50 rounded-full text-blue-600 hidden">Startup</span>
+              <h3 class="my-4 text-xl md:text-2xl font-bold font-heading">{{services_1_title}}</h3>
+              <p class="mb-4 text-sm md:text-base leading-loose text-blueGray-400">{{services_1_description}}</p>
+              <a class="text-xs font-semibold" style="color: {{brandColor}};" href="#">
+                <span>Demo Gratis</span>
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_ea5ee3707da90bc6007314bf6231c3a6" class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"></svg>
+              </a>
+            </div>
+            <div class="w-full lg:w-1/2 px-4 mb-8 order-0">
+              <img class="w-80 h-80 object-cover rounded" src="%7B%7Bservices_1_img%7D%7D" alt="">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-4 mb-20">
+            <div class="w-full lg:w-1/2 px-4 lg:pr-20 lg:pt-4 order-1 lg:order-0">
+              <span class="inline-block py-1 px-3 uppercase text-xs font-semibold bg-blue-50 rounded-full text-blue-600 hidden">Startup</span>
+              <h3 class="my-4 text-xl md:text-2xl font-bold font-heading">{{services_2_title}}</h3>
+              <p class="mb-4 text-sm md:text-base leading-loose text-blueGray-400">{{services_2_description}}</p>
+              <a class="text-xs font-semibold" style="color: {{brandColor}};" href="#">
+                <span>Demo Gratis</span>
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_ea5ee3707da90bc6007314bf6231c3a6" class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"></svg>
+              </a>
+            </div>
+            <div class="w-full lg:w-1/2 px-4 mb-8 order-0 lg:order-1 grid place-items-end">
+              <img class="w-80 h-80 object-cover rounded" src="%7B%7Bservices_2_img%7D%7D" alt="">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-4 mb-20">
+            <div class="w-full lg:w-1/2 px-4 lg:pl-20 lg:pt-4 order-1">
+              <span class="inline-block py-1 px-3 uppercase text-xs font-semibold bg-blue-50 rounded-full text-blue-600 hidden">Startup</span>
+              <h3 class="my-4 text-xl md:text-2xl font-bold font-heading">{{services_3_title}}</h3>
+              <p class="mb-4 text-sm md:text-base leading-loose text-blueGray-400">{{services_3_description}}</p>
+              <a class="text-xs font-semibold" style="color: {{brandColor}};" href="#">
+                <span>Demo Gratis</span>
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_ea5ee3707da90bc6007314bf6231c3a6" class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"></svg>
+              </a>
+            </div>
+            <div class="w-full lg:w-1/2 px-4 mb-8 order-0">
+              <img class="w-80 h-80 object-cover rounded" src="%7B%7Bservices_3_img%7D%7D" alt="">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-4 mb-20">
+            <div class="w-full lg:w-1/2 px-4 lg:pr-20 lg:pt-4 order-1 lg:order-0">
+              <span class="inline-block py-1 px-3 uppercase text-xs font-semibold bg-blue-50 rounded-full text-blue-600 hidden">Startup</span>
+              <h3 class="my-4 text-xl md:text-2xl font-bold font-heading">{{services_4_title}}</h3>
+              <p class="mb-4 text-sm md:text-base leading-loose text-blueGray-400">{{services_4_description}}</p>
+              <a class="text-xs font-semibold" style="color: {{brandColor}};" href="#">
+                <span>Demo Gratis</span>
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_ea5ee3707da90bc6007314bf6231c3a6" class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"></svg>
+              </a>
+            </div>
+            <div class="w-full lg:w-1/2 px-4 mb-8 order-0 lg:order-1 grid place-items-end">
+              <img class="w-80 h-80 object-cover rounded" src="%7B%7Bservices_4_img%7D%7D" alt="">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-4 mb-20 hidden" :class="{ 'hidden': !showContent }">
+            <div class="w-full lg:w-1/2 px-4 lg:pr-20 lg:pt-4 order-1 lg:order-0">
+              <span class="inline-block py-1 px-3 uppercase text-xs font-semibold bg-blue-50 rounded-full text-blue-600">Development</span>
+              <h3 class="my-4 text-xl md:text-2xl font-bold font-heading">Curabitur vestibulum odio maximus.</h3>
+              <p class="mb-4 text-sm md:text-base leading-loose text-blueGray-400">Aenean tempus orci eu est ultrices hendrerit. Fusce suscipit, leo a semper venenatis, felis urna pulvinar nibh, vitae porta erat risus sed mauris. Vestibulum vehicula leo eget libero eleifend, quis dictum eros bibendum. Maecenas convallis tempor varius.</p>
+              <a class="text-xs font-semibold text-blue-600" href="#">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_ea5ee3707da90bc6007314bf6231c3a6" class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"></svg>
+              </a>
+            </div>
+            <div class="w-full lg:w-1/2 px-4 mb-8 order-0 lg:order-1">
+              <img class="w-full h-80 object-cover rounded" src="https://images.unsplash.com/photo-1603050927325-baf630505e27?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjExMDk0fQ&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80" alt="">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-4 mb-20 hidden" :class="{ 'hidden': !showContent }">
+            <div class="w-full lg:w-1/2 px-4 lg:pl-20 lg:pt-4 order-1">
+              <span class="inline-block py-1 px-3 uppercase text-xs font-semibold bg-blue-50 rounded-full text-blue-600">Startup</span>
+              <h3 class="my-4 text-xl md:text-2xl font-bold font-heading">Curabitur vestibulum odio maximus.</h3>
+              <p class="mb-4 text-sm md:text-base leading-loose text-blueGray-400">Aenean tempus orci eu est ultrices hendrerit. Fusce suscipit, leo a semper venenatis, felis urna pulvinar nibh, vitae porta erat risus sed mauris. Vestibulum vehicula leo eget libero eleifend, quis dictum eros bibendum. Maecenas convallis tempor varius.</p>
+              <a class="text-xs font-semibold text-blue-600" href="#">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_ea5ee3707da90bc6007314bf6231c3a6" class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"></svg>
+              </a>
+            </div>
+            <div class="w-full lg:w-1/2 px-4 mb-8 order-0">
+              <img class="w-full h-80 object-cover rounded" src="https://images.unsplash.com/photo-1603665270146-bbdf9858ea55?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt="">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-4 mb-20 hidden" :class="{ 'hidden': !showContent }">
+            <div class="w-full lg:w-1/2 px-4 lg:pr-20 lg:pt-4 order-1 lg:order-0">
+              <span class="inline-block py-1 px-3 uppercase text-xs font-semibold bg-blue-50 rounded-full text-blue-600">Startup</span>
+              <h3 class="my-4 text-xl md:text-2xl font-bold font-heading">Curabitur vestibulum odio maximus.</h3>
+              <p class="mb-4 text-sm md:text-base leading-loose text-blueGray-400">Aenean tempus orci eu est ultrices hendrerit. Fusce suscipit, leo a semper venenatis, felis urna pulvinar nibh, vitae porta erat risus sed mauris. Vestibulum vehicula leo eget libero eleifend, quis dictum eros bibendum. Maecenas convallis tempor varius.</p>
+              <a class="text-xs font-semibold text-blue-600" href="#">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_ea5ee3707da90bc6007314bf6231c3a6" class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"></svg>
+              </a>
+            </div>
+            <div class="w-full lg:w-1/2 px-4 mb-8 order-0 lg:order-1">
+              <img class="w-full h-80 object-cover rounded" src="https://images.unsplash.com/photo-1603665230556-b5bb38f82591?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt="">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-4 mb-20 hidden" :class="{ 'hidden': !showContent }">
+            <div class="w-full lg:w-1/2 px-4 lg:pl-20 lg:pt-4 order-1">
+              <span class="inline-block py-1 px-3 uppercase text-xs font-semibold bg-blue-50 rounded-full text-blue-600">Startup</span>
+              <h3 class="my-4 text-xl md:text-2xl font-bold font-heading">Curabitur vestibulum odio maximus.</h3>
+              <p class="mb-4 text-sm md:text-base leading-loose text-blueGray-400">Aenean tempus orci eu est ultrices hendrerit. Fusce suscipit, leo a semper venenatis, felis urna pulvinar nibh, vitae porta erat risus sed mauris. Vestibulum vehicula leo eget libero eleifend, quis dictum eros bibendum. Maecenas convallis tempor varius.</p>
+              <a class="text-xs font-semibold text-blue-600" href="#">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_ea5ee3707da90bc6007314bf6231c3a6" class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"></svg>
+              </a>
+            </div>
+            <div class="w-full lg:w-1/2 px-4 mb-8 order-0">
+              <img class="w-full h-80 object-cover rounded" src="https://images.unsplash.com/photo-1603665301175-57ba46f392bf?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80" alt="">
+            </div>
+          </div>
+          <div class="text-center hidden"><a x-on:click.prevent="showContent = true" :class="{ 'hidden': showContent }" class="inline-block py-4 px-8 text-xs text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded" href="#">Show all posts</a></div>
+        </div>
+      </section>
+          
+      <section class="py-20">
+        <div class="container px-4 mx-auto">
+          <div class="pt-20 pb-24 px-8 md:px-16 rounded" style="background-color: #F9FAFC;">
+            <div class="flex flex-wrap -mx-8">
+              <div class="w-full lg:w-1/2 px-8 flex">
+                <div class="my-auto">
+                  <h2 class="text-3xl lg:text-4xl font-bold font-heading">{{ctaTitle}}</h2>
+                  <p class="mt-2 mb-6 text-blueGray-400 leading-relaxed">{{ctaDesc}}</p>
+                  <a class="block sm:inline-block py-4 px-8 text-xs text-blueGray-500 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded" href="signup.html">Demo Gratis</a>
+                </div>
+              </div>
+              <div class="w-full lg:w-1/2 px-8 mt-12 lg:mt-0">
+                <div class="relative max-w-sm sm:max-w-md mx-auto">
+                  <img class="relative mx-auto" src="%7B%7BctaImage%7D%7D" alt="" cursor="shuffle-editor">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+          
+      <section class="py-20 lg:bg-contain bg-top bg-no-repeat bs-section-dragged" style="background-image: url('https://shuffle.dev/metis-assets/backgrounds/intersect.svg');">
+        <div class="container mx-auto px-4">
+          <div class="max-w-sm mx-auto mb-12 text-center">
+            <h2 class="mb-4 text-3xl md:text-4xl font-bold font-heading whitespace-nowrap">Preguntas Frecuentes</h2>
+          </div>
+          <div class="max-w-3xl mx-auto">
+            <ul class="space-y-4">
+              <li class="px-6 py-4 bg-white rounded shadow" x-data="{ accordion: false }">
+                <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-blueGray-700" x-on:click="accordion = !accordion" :class="{ 'text-blue-600 hover:text-blue-700': accordion, 'hover:text-blueGray-700': !accordion }">
+                  <span>{{faqs_0_question}}</span>
+                  <span :class="{'rotate-90 text-blueGray-500': accordion, 'rotate-0 text-blueGray-300': !accordion }" class="inline-block transform rotate-0 text-blueGray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500" style="">
+                  <p class="mt-2 text-blueGray-400 font-normal leading-loose">{{faqs_0_answer}}</p>
+                </div>
+              </li>
+              <li class="px-6 py-4 bg-white rounded shadow" x-data="{ accordion: false }">
+                <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-blueGray-700" x-on:click="accordion = !accordion" :class="{ 'text-blue-600 hover:text-blue-700': accordion, 'hover:text-blueGray-700': !accordion }">
+                  <span>{{faqs_1_question}}</span>
+                  <span :class="{'rotate-90 text-blueGray-500': accordion, 'rotate-0 text-blueGray-300': !accordion }" class="inline-block transform rotate-0 text-blueGray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500" style="">
+                  <p class="mt-2 text-blueGray-400 font-normal leading-loose">{{faqs_1_answer}}</p>
+                </div>
+              </li>
+              <li class="px-6 py-4 bg-white rounded shadow" x-data="{ accordion: false }">
+                <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-blueGray-700" x-on:click="accordion = !accordion" :class="{ 'text-blue-600 hover:text-blue-700': accordion, 'hover:text-blueGray-700': !accordion }">
+                  <span>{{faqs_2_question}}</span>
+                  <span :class="{'rotate-90 text-blueGray-500': accordion, 'rotate-0 text-blueGray-300': !accordion }" class="inline-block transform rotate-0 text-blueGray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500" style="">
+                  <p class="mt-2 text-blueGray-400 font-normal leading-loose">{{faqs_2_answer}}</p>
+                </div>
+              </li>
+              <li class="px-6 py-4 bg-white rounded shadow hidden" x-data="{ accordion: false }">
+                <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-blueGray-700" x-on:click="accordion = !accordion" :class="{ 'text-blue-600 hover:text-blue-700': accordion, 'hover:text-blueGray-700': !accordion }">
+                  <span>{{faqs_3_question}}</span>
+                  <span :class="{'rotate-90 text-blueGray-500': accordion, 'rotate-0 text-blueGray-300': !accordion }" class="inline-block transform rotate-0 text-blueGray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500" style="">
+                  <p class="mt-2 text-blueGray-400 font-normal leading-loose">{{faqs_3_answer}}</p>
+                </div>
+              </li>
+              <li class="px-6 py-4 bg-white rounded shadow" x-data="{ accordion: false }">
+                <button class="w-full flex justify-between items-center text-left font-bold font-heading hover:text-blueGray-700" x-on:click="accordion = !accordion" :class="{ 'text-blue-600 hover:text-blue-700': accordion, 'hover:text-blueGray-700': !accordion }">
+                  <span>{{faqs_4_question}}</span>
+                  <span :class="{'rotate-90 text-blueGray-500': accordion, 'rotate-0 text-blueGray-300': !accordion }" class="inline-block transform rotate-0 text-blueGray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500" style="">
+                  <p class="mt-2 text-blueGray-400 font-normal leading-loose">{{faqs_3_answer}}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+          
+      <section class="py-16">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-2xl lg:max-w-3xl mx-auto">
+            <div class="mb-12 text-center">
+              <h2 class="text-4xl font-bold font-heading">Contacto</h2>
+              <p class="text-blueGray-400 hidden">We will be glad to hear from you</p>
+            </div>
+            <div class="flex flex-wrap -mx-3 text-center">
+              <iframe class="w-full h-48 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d144.9537353153166!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d2fed4b5b52!2sFlinders%20Street%20Station!5e0!3m2!1sen!2sus!4v1633023222539!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+              <div class="w-1/2 lg:w-1/3 px-3 mb-12 mt-10">
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_eef57a14e9209bc30ada2df41a492357" class="mb-6 h-8 w-8 mx-auto text-red-600" fill="none" viewbox="0 0 24 24" stroke="{{brandColor}}">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                <div class="leading-relaxed">
+                  <p>{{contact_phone}}</p>
+                </div>
+              </div>
+              <div class="w-1/2 lg:w-1/3 px-3 mb-12 mt-10">
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_4e6e4ec31c7b8450afa1b12b5b84f14f" class="mb-6 h-8 w-8 mx-auto text-red-600" fill="none" viewbox="0 0 24 24" stroke="{{brandColor}}">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <div class="leading-relaxed">
+                  <p>{{contact_email}}</p>
+                </div>
+              </div>
+              <div class="w-full lg:w-1/3 px-3 mb-12 mt-10">
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg_0f016e3914bf10840454d6f42c4b7dbe" class="mb-6 h-8 w-8 mx-auto text-red-600" fill="none" viewbox="0 0 24 24" stroke="{{brandColor}}">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <div class="leading-relaxed">
+                  <p>{{contact_address}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+          
+      <section class="py-16 bg-gray-100 border-t border-gray-300">
+        <div class="container px-4 mx-auto flex flex-col items-center text-center removed">
+          <a class="inline-block mb-6 text-2xl font-semibold leading-none">{{companyName}}</a>
+          <div class="flex justify-center mb-6 -mx-2">
+            <a class="inline-block px-2" href="#">
+              <img src="https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Facebook_glyph_svg-64.png" width="25" height="25" alt="Facebook">
+            </a>
+            <a class="inline-block px-2" href="#">
+              <img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Instagram_svg-64.png" width="25" height="25" alt="Instagram">
+            </a>
+            <a class="inline-block px-2" href="#">
+              <img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Youtube_svg-64.png" width="25" height="25" alt="YouTube">
+            </a>
+            <a class="inline-block px-2" href="#">
+              <img src="https://cdn2.iconfinder.com/data/icons/social-media-2421/512/TikTok-64.png" width="25" height="25" alt="TikTok">
+            </a>
+            <a class="inline-block px-2" href="#">
+              <img src="https://images.freeimages.com/image/large-previews/f35/x-twitter-logo-on-black-circle-5694247.png?fmt=avif&amp;h=350" width="25" height="25" alt="Twitter">
+            </a>
+            <a class="inline-block px-2" href="#">
+              <img src="https://cdn0.iconfinder.com/data/icons/picons-social/57/spotify_rounded-64.png" width="25" height="25" alt="Spotify">
+            </a>
+            <a class="inline-block px-2" href="#">
+              <img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Linkedin_svg-64.png" width="25" height="25" alt="LinkedIn">
+            </a>
+          </div>
+          <p class="text-sm text-blueGray-400 footer-copyright">
+            ©
+            <span class="current-year"></span>
+            Hecho con <a href="https://webpy.co" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors duration-200">Webpy</a>
+          </p>
+        </div>
+      </section>
+  </div>
+    <script type="text/javascript" src="js/571722.js?v=1775606460" data-custom-component-id="571722"></script>
+    <script type="text/javascript" src="js/908464.js?v=1775606460" data-custom-component-id="908464"></script>
+</body>
+</html>
+
